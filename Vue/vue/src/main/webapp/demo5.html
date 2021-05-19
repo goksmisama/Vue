@@ -10,14 +10,15 @@
 
 	<body>
 		<div id="app">
-		
+			<form method="get" action="http://www.baidu.com" @submit.prevent>
+				<input type="submit" value="提交">
+			</form>
 		</div>
 	</body>
 	<script>
-		//view model
-		
-		
-		
+		new Vue({
+			el: "#app",
+		});
 	</script>
 
 </html>

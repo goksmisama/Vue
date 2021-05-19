@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="utf-8" />
-		<title>v-on:click</title>
+		<title>v-model</title>
 		<script src="js/vuejs-2.5.16.js"></script>
 	</head>
+
 	<body>
 		<div id="app">
-			{{msg}}<br/>
-			<button v-on:click="fun1()">vue的onclick</button>
+			<input type="text" v-model="user.username">
+			<input type="text" v-model="user.password">
 		</div>
 	</body>
 	<script>
-		//view model
 		new Vue({
 			el:"#app",
 			data:{
-				msg: "hello Vue"
-			},
-			methods:{
-				fun1: function () {
-					this.msg="你好 Vue"
+				user:{
+					username:"张三",
+					password:"123456"
 				}
 			}
 		});
 	</script>
-</html> 
+
+</html>

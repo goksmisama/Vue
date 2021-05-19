@@ -9,13 +9,27 @@
 
 	<body>
 		<div id="app">
-			<input type="text" v-on:keydown="fun($event)">
+			<input type="text" v-on:keydown="showKeyCode($event)"><br/>
+			{{msg}}
 		</div>
 	</body>
 	<script>
-		//view model
+		new Vue({
+			el:"#app",
+			data:{
+				msg:""
+			},
+			methods:{
+				showKeyCode: function (event) {
+					keyCode = event.keyCode;
+					if (keyCode < 48 || keyCode > 57) {
+						event.preventDefault();
+					}
+				}
+			}
+		});
 	</script>
-	
-	
+
+
 
 </html>

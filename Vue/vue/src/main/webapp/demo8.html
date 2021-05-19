@@ -9,12 +9,18 @@
 
 	<body>
 		<div id="app">
-			
+			<font size="5px" v-bind:color="color1">成都大学</font>
+			<font size="5px" :color="color2">四川大学</font>
 		</div>
 	</body>
 	<script>
-		//view model
-		
+		new Vue({
+			el:"#app",
+			data:{
+				color1:"red",
+				color2:"green"
+			}
+		});
 	</script>
 
 </html>

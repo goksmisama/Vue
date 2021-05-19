@@ -7,11 +7,22 @@
 	</head>
 	<body>
 		<div id="app">
-			
+			<span v-if="flag">成都大学</span>
+			<span v-show="flag">四川大学</span>
+			<span @click="toggle()">toggle</span>
 		</div>
 	</body>
 	<script>
-		//view model
-		
+		new Vue({
+			el: "#app",
+			data:{
+				flag:false
+			},
+			methods: {
+				toggle: function () {
+					this.flag=!this.flag;
+				}
+			}
+		});
 	</script>
 </html>

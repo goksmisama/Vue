@@ -6,12 +6,18 @@
 		<script src="js/vuejs-2.5.16.js"></script>
 	</head>
 	<body>
-		<div id="app">
-			
-		</div>
+	<div id="app">
+		<ul>
+			<li v-for="(key,value,index) in person">{{index}}={{key}}={{value}}</li>
+		</ul>
+	</div>
 	</body>
 	<script>
-		//view model
-		
+		new Vue({
+			el:"#app",
+			data:{
+				person:{id:1, name:"张三", age:"23"}
+			}
+		})
 	</script>
 </html>
